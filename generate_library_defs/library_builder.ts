@@ -367,7 +367,7 @@ declare var ${className}: typeof ${className}Constructor & {
       fs.writeFileSync(
         path.join(
           this.paths.staticGodotDefsPath,
-          fileName.slice(0, -4) + ".d.ts"
+          this.paths.replaceExtension(fileName, ".d.ts")
         ),
         result
       )
